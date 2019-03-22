@@ -8,6 +8,8 @@ public class Main {
 		InferenceEngine.addImply(new Implies(new Predicate("PC slow"),new Predicate("RAM")));
 		InferenceEngine.addImply(new Implies(new And(new Predicate("RAM"),new Predicate("Connectivity")),new Predicate("Motherboard")));
 		//InferenceEngine.addImply(new Implies(new And(new Predicate("is fat"),new Predicate("John")),new Predicate("drives BMW")));
+		System.out.println(InferenceEngine.getString());
+		InferenceEngine.readdata();
 		InferenceEngine.findSolution();
 		System.out.println(InferenceEngine.getString());
 

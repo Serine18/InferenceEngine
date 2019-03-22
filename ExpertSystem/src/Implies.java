@@ -26,10 +26,13 @@ public class Implies implements Rule {
 		System.out.println("match "+r+" => "+p);
 		if((!InferenceEngine.contains(p))&&r.match())
 			{System.out.println(p+" is true");
-			InferenceEngine.addPartial(p);
+			InferenceEngine.addnewPredicate(p);
 			return true;}
 		return false;
 	}
+	
+	public boolean checkres(Predicate pred)
+	{return pred.equals(p);}
 	
 	public String toString()
 	{return r+" => "+p;}
