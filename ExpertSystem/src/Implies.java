@@ -14,9 +14,16 @@ public class Implies implements Rule {
 			return true;}
 		return false;
 	}
+	
+	public boolean findsolution()
+	{System.out.println("findsol "+r+" => "+p);
+	boolean cond=false;
+	cond=r.match()||p.match();
+	return true;		
+	}
 
-	public boolean match(Predicate pred) {
-		//System.out.println(InferenceEngine.contains(p));
+	public boolean match() {
+		System.out.println("match "+r+" => "+p);
 		if((!InferenceEngine.contains(p))&&r.match())
 			{System.out.println(p+" is true");
 			InferenceEngine.addPartial(p);

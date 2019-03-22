@@ -40,9 +40,8 @@ do{cnt=0;
 	List<Predicate> auxlist=new ArrayList<Predicate>();
 for(Predicate p:partialsolutions)
 	auxlist.add(p);
-for(Predicate p:auxlist)
-	{for(Implies i:implylist)
-		if(i.match(p))
+for(Implies i:implylist)
+	{if(i.match())
 			cnt++;}
 }while(cnt!=0);
 }
