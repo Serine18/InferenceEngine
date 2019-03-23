@@ -19,6 +19,8 @@ public boolean match() {
 	System.out.println("Test "+name);
 	if(InferenceEngine.contains(this))
 		return true;
+	if(InferenceEngine.checksol(this))
+		return InferenceEngine.matchsol(this);
 	System.out.println(name+"? y/n");
 	while(true) {
 	try {char c=(char) System.in.read();

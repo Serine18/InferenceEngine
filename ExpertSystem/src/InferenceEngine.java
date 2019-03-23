@@ -63,6 +63,13 @@ public static boolean checksol(Predicate p)
 	solfound=true;}
 	return solfound;}
 
+public static boolean matchsol(Predicate p)
+{{boolean solfound=false;
+for(Implies i:implylist)
+{if(i.matchres(p))
+solfound=true;}
+return solfound;}}
+
 
 public static String getString()
 {String aux="";

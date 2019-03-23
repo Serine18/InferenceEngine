@@ -32,7 +32,15 @@ public class Implies implements Rule {
 	}
 	
 	public boolean checkres(Predicate pred)
-	{return pred.equals(p);}
+	{if(pred.equals(p))
+		return true;
+		return false;}
+	
+	public boolean matchres(Predicate pred)
+	{if(checkres(pred)){
+		System.out.println("Test "+this);
+		return r.match();}
+	return false;}
 	
 	public String toString()
 	{return r+" => "+p;}
