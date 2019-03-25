@@ -18,4 +18,9 @@ public class Or implements LogicalRule {
 		
 	public String toString()
 	{return l+" || "+r;}
+
+	@Override
+	public boolean contains(Predicate p) {
+		return this.l.contains(p)||this.r.contains(p);
+	}
 }

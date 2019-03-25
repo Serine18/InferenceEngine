@@ -26,7 +26,9 @@ public class Implies implements Rule {
 		System.out.println("match "+r+" => "+p);
 		if((!InferenceEngine.contains(p))&&r.match())
 			{System.out.println(p+" is true\n");
+			if(!InferenceEngine.checkpremise(p))
 			InferenceEngine.addnewPredicate(p);
+			else InferenceEngine.addPartial(p);
 			return true;}
 		return false;
 	}
@@ -45,4 +47,6 @@ public class Implies implements Rule {
 	public String toString()
 	{return r+" => "+p;}
 
+	public  boolean checkpremise(Predicate p)
+	{return this.r.contains(p);}
 }

@@ -37,4 +37,9 @@ public boolean match() {
 
 public String toString(){
 	return name;}
+
+@Override
+public boolean contains(Predicate p) {
+	return this.equals(p);
+}
 }

@@ -1,3 +1,2 @@
-{"expr":"predicate","val":"isfat"}
-{"expr":"implies","val":{"expr":"predicate","val":"isfat"},"conc":{"expr":"predicate","val":"runsslow"}}
-{"expr":"implies","val":{"expr":"and","l":{"expr":"predicate","val":"runsslow"},"r":{"expr":"predicate","val":"hearthhurts"}},"conc":{"expr":"predicate","val":"dies"}}
+{"expr":"implies","val":{"expr":"and","l":{"expr":"predicate","val":"CPUhot"},"r":{"expr":"predicate","val":"PCshutdown"}},"conc":{"expr":"predicate","val":"BIOS"}}
+{"expr":"implies","val":{"expr":"or","l":{"expr":"predicate","val":"temp>60"},"r":{"expr":"predicate","val":"fanspeedup"}},"conc":{"expr":"predicate","val":"CPUhot"}}

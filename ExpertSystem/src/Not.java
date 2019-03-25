@@ -17,4 +17,9 @@ public boolean match() {
 public String toString()
 {return " not "+r;}
 
+@Override
+public boolean contains(Predicate p) {
+	return this.r.contains(p);
+}
+
 }

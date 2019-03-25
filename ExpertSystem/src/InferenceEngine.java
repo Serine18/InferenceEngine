@@ -66,6 +66,13 @@ public static boolean checksol(Predicate p)
 	solfound=true;}
 	return solfound;}
 
+public static boolean checkpremise(Predicate p)
+{for(Implies i:implylist)
+	if(i.checkpremise(p))
+		return true;
+return false;
+}
+
 public static boolean matchsol(Predicate p)
 {{boolean solfound=false;
 for(Implies i:implylist)
