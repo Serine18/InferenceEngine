@@ -41,7 +41,9 @@ public class Implies implements Rule {
 	public boolean matchres(Predicate pred)
 	{if(checkres(pred)){
 		System.out.println("Test "+this);
-		return r.match();}
+		boolean val=r.match();
+		System.out.println((val?pred+" is true ":pred+" is false")+"\n");
+		return val;}
 	return false;}
 	
 	public String toString()
