@@ -25,7 +25,7 @@ public class Implies implements Rule {
 	public boolean match() {
 		System.out.println("match "+r+" => "+p);
 		if((!InferenceEngine.contains(p))&&r.match())
-			{System.out.println(p+" is true");
+			{System.out.println(p+" is true\n");
 			InferenceEngine.addnewPredicate(p);
 			return true;}
 		return false;

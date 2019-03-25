@@ -24,13 +24,13 @@ public boolean match() {
 	System.out.println(name+"? y/n");
 	while(true) {
 	try {char c=(char) System.in.read();
-		if(c=='y')
-			break;
-		else if(c=='n')
-			return false;
+		if(c=='y') {
+			break;}
+		else if(c=='n'){
+			return false;}
 	} catch (IOException e) {
 	}}
-	System.out.println(name);
+	System.out.println(name+"\n");
 	InferenceEngine.addPartial(this);
 	return true;
 }

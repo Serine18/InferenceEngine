@@ -21,14 +21,17 @@ public static InferenceEngine create(){
 
 public static boolean contains(Predicate p){
 	for(Predicate q:predicatelist)
-		if(q.equals(p))
-			return true;
+		if(q.equals(p)){
+			System.out.println(p+" is true");
+			return true;}
 	for(Predicate q:partialsolutions)
-		if(q.equals(p))
-			return true;
+		if(q.equals(p)){
+			System.out.println(p+" is true");
+			return true;}
 	for(Predicate q:newpredicatelist)
-		if(q.equals(p))
-			return true;
+		if(q.equals(p)){
+			System.out.println(p+" is true");
+			return true;}
 	return false;}
 
 public static void addPartial(Predicate p){

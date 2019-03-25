@@ -1,0 +1,3 @@
+{"expr":"predicate","val":"isfat"}
+{"expr":"implies","val":{"expr":"predicate","val":"isfat"},"conc":{"expr":"predicate","val":"runsslow"}}
+{"expr":"implies","val":{"expr":"and","l":{"expr":"predicate","val":"runsslow"},"r":{"expr":"predicate","val":"hearthhurts"}},"conc":{"expr":"predicate","val":"dies"}}
